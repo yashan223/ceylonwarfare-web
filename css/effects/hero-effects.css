@@ -1,0 +1,142 @@
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.glow-primary {
+    box-shadow: 0 0 20px rgba(77, 159, 255, 0.18);
+}
+
+.glow-secondary {
+    box-shadow: 0 0 25px rgba(77, 159, 255, 0.22);
+}
+
+.glass-panel {
+    background: rgba(26, 25, 27, 0.6);
+    backdrop-filter: blur(12px);
+}
+
+body {
+    min-height: max(884px, 100dvh);
+}
+
+.glitch-word {
+    position: relative;
+}
+
+.glitch-word::before {
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    text-shadow: 2px 0 rgba(77, 159, 255, 0.8);
+    top: 0;
+    color: #ffffff;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: glitch-1 2s linear infinite alternate-reverse;
+}
+
+.glitch-word::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -2px 0 rgba(77, 159, 255, 0.8);
+    top: 0;
+    color: #ffffff;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: glitch-2 3s linear infinite alternate-reverse;
+}
+
+@keyframes glitch-1 {
+    0% { clip: rect(20px, 930px, 56px, 0); }
+    5% { clip: rect(30px, 930px, 16px, 0); }
+    10% { clip: rect(81px, 930px, 95px, 0); }
+    15% { clip: rect(54px, 930px, 26px, 0); }
+    20% { clip: rect(91px, 930px, 31px, 0); }
+    25% { clip: rect(88px, 930px, 16px, 0); }
+    30% { clip: rect(42px, 930px, 11px, 0); }
+    35% { clip: rect(67px, 930px, 65px, 0); }
+    40% { clip: rect(32px, 930px, 31px, 0); }
+    45% { clip: rect(67px, 930px, 78px, 0); }
+    50% { clip: rect(42px, 930px, 42px, 0); }
+    55% { clip: rect(72px, 930px, 22px, 0); }
+    60% { clip: rect(57px, 930px, 32px, 0); }
+    65% { clip: rect(89px, 930px, 92px, 0); }
+    70% { clip: rect(30px, 930px, 64px, 0); }
+    75% { clip: rect(18px, 930px, 75px, 0); }
+    80% { clip: rect(42px, 930px, 15px, 0); }
+    85% { clip: rect(97px, 930px, 30px, 0); }
+    90% { clip: rect(60px, 930px, 33px, 0); }
+    95% { clip: rect(82px, 930px, 94px, 0); }
+    100% { clip: rect(10px, 930px, 24px, 0); }
+}
+
+@keyframes glitch-2 {
+    0% { clip: rect(72px, 930px, 25px, 0); }
+    5% { clip: rect(92px, 930px, 85px, 0); }
+    10% { clip: rect(38px, 930px, 65px, 0); }
+    15% { clip: rect(66px, 930px, 84px, 0); }
+    20% { clip: rect(19px, 930px, 35px, 0); }
+    25% { clip: rect(11px, 930px, 82px, 0); }
+    30% { clip: rect(44px, 930px, 81px, 0); }
+    35% { clip: rect(53px, 930px, 21px, 0); }
+    40% { clip: rect(31px, 930px, 69px, 0); }
+    45% { clip: rect(39px, 930px, 17px, 0); }
+    50% { clip: rect(54px, 930px, 28px, 0); }
+    55% { clip: rect(95px, 930px, 17px, 0); }
+    60% { clip: rect(75px, 930px, 65px, 0); }
+    65% { clip: rect(67px, 930px, 23px, 0); }
+    70% { clip: rect(58px, 930px, 73px, 0); }
+    75% { clip: rect(41px, 930px, 95px, 0); }
+    80% { clip: rect(83px, 930px, 54px, 0); }
+    85% { clip: rect(30px, 930px, 82px, 0); }
+    90% { clip: rect(95px, 930px, 21px, 0); }
+    95% { clip: rect(12px, 930px, 25px, 0); }
+    100% { clip: rect(48px, 930px, 56px, 0); }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: clamp(3rem, 12vw, 4rem);
+        line-height: 0.95;
+    }
+}
+
+.syntax-drop {
+    position: absolute;
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    color: rgba(77, 159, 255, 0.62);
+    white-space: nowrap;
+    pointer-events: none;
+    animation: drop-syntax linear infinite;
+    font-weight: bold;
+}
+
+@keyframes drop-syntax {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.8;
+    }
+    95% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+.syntax-rain {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.syntax-rain span {
+    position: absolute;
+}
