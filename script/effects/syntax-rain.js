@@ -43,7 +43,6 @@ if (syntaxBackground) {
         const span = document.createElement('span');
         let dropText = randomFrom(weaponDrops);
 
-        // Mix in tactical callouts so the rain has varied phrases.
         if (Math.random() > 0.65) {
             dropText = `${dropText} // ${randomFrom(combatTerms)}`;
         }

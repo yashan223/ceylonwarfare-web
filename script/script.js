@@ -1,6 +1,3 @@
-// TACTICAL_NET // COD4 Network Script
-
-// Structured data for SEO
 const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -13,7 +10,6 @@ const structuredData = {
     ]
 };
 
-// Add structured data to document
 function addStructuredData() {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -21,7 +17,6 @@ function addStructuredData() {
     document.head.appendChild(script);
 }
 
-// Initialize app
 document.addEventListener('DOMContentLoaded', function() {
     addStructuredData();
     initializeAnimations();
@@ -30,9 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeWhatsAppPopup();
 });
 
-// Initialize animations
 function initializeAnimations() {
-    // Animate elements on load
     const elements = document.querySelectorAll('[data-animate]');
     elements.forEach((element, index) => {
         setTimeout(() => {
@@ -42,7 +35,6 @@ function initializeAnimations() {
     });
 }
 
-// Copy to clipboard functionality
 function initializeCopyButtons() {
     const copyButtons = document.querySelectorAll('[data-copy]');
     copyButtons.forEach(button => {
@@ -54,7 +46,6 @@ function initializeCopyButtons() {
     });
 }
 
-// Smooth scroll for top navigation links
 function initializeNavigation() {
     const navLinks = document.querySelectorAll('nav a[href^="#"]');
     const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -102,7 +93,6 @@ function initializeNavigation() {
     });
 }
 
-// Show WhatsApp popup only when Rentals section is visible
 function initializeWhatsAppPopup() {
     const rentalsSection = document.getElementById('rentals');
     const popup = document.getElementById('whatsapp-popup');
@@ -152,17 +142,14 @@ function initializeWhatsAppPopup() {
     }
 }
 
-// Copy text to clipboard
 function copyToClipboard(elementId) {
     const textElement = document.getElementById(elementId);
     if (!textElement) return;
 
     const text = textElement.textContent;
     navigator.clipboard.writeText(text).then(() => {
-        // Show notification
         showNotification(`COPIED: ${text}`);
         
-        // Change button text temporarily
         const originalText = textElement.textContent;
         textElement.textContent = "COPIED!";
         
@@ -175,7 +162,6 @@ function copyToClipboard(elementId) {
     });
 }
 
-// Show notification
 function showNotification(message) {
     const notification = document.createElement('div');
     notification.style.position = 'fixed';
@@ -198,12 +184,10 @@ function showNotification(message) {
     
     document.body.appendChild(notification);
     
-    // Show notification
     setTimeout(() => {
         notification.style.opacity = '1';
     }, 100);
     
-    // Hide notification
     setTimeout(() => {
         notification.style.opacity = '0';
         setTimeout(() => {
@@ -214,7 +198,6 @@ function showNotification(message) {
     }, 2500);
 }
 
-// Server data manager
 const ServerData = {
     servers: [
         {
@@ -260,7 +243,6 @@ const ServerData = {
     }
 };
 
-// Page utilities
 const PageUtils = {
     smoothScroll(target) {
         const element = document.querySelector(target);
@@ -284,13 +266,11 @@ const PageUtils = {
         if (href.startsWith('#')) {
             this.smoothScroll(href);
         } else if (href.startsWith('cod4://')) {
-            // Handle game protocol
             window.location.href = href;
         }
     }
 };
 
-// Export for use
 window.TACTICAL = {
     ServerData,
     PageUtils,
