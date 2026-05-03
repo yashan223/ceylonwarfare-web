@@ -1,19 +1,10 @@
-# Ceylon Warfare Web
+# CEYLON WARFARE
 
-Official website for the Ceylon Warfare community.
+## SETUP
+1. **BACKEND:** `cd backend` -> `node server.js`
+2. **FRONTEND:** Run `index.html` on port 8080.
 
-## How to Run
-
-### 1. Backend (Required for Music Uploads)
-```bash
-cd backend
-npm install
-node server.js
-```
-
-### 2. Frontend
-Open `index.html` using a local server on port 8080.
-
-## Features
-- **Killcam Music:** Upload and Download MP3s for in-game use.
-- **Admin:** "Delete All" button (requires access code).
+## FEATURES
+- **UPLOAD:** Public
+- **DOWNLOAD:** Public
+- **DELETE ALL:** Requires Access Code
