@@ -1,6 +1,5 @@
 import express from 'express';
 import multer from 'multer';
-import cors from 'cors';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -9,7 +8,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-const PORT = 3001;
+const PORT = 3333;
+
+const ALLOWED_ORIGINS = new Set([
+    'https://ceylonwarfare.tech',
+    'https://www.ceylonwarfare.tech',
+    'http://localhost:3333',
+    'http://127.0.0.1:3333'
+]);
 
 
 const UPLOAD_DIR = path.join(__dirname, 'uploads');
@@ -20,7 +26,6 @@ if (!fs.existsSync(UPLOAD_DIR)) {
     fs.mkdirSync(UPLOAD_DIR, { recursive: true });
 }
 
-app.use(cors());
 app.use(express.json());
 app.use('/music', express.static(UPLOAD_DIR));
 

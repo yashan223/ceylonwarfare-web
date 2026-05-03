@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:3001';
+const API_BASE = 'http://localhost:3333';
 
 document.addEventListener('DOMContentLoaded', () => {
     const uploadForm     = document.getElementById('upload-form');
