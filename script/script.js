@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeCopyButtons();
     initializeNavigation();
     initializeWhatsAppPopup();
+    initializeOfferModal();
 });
 
 function initializeAnimations() {
@@ -140,6 +141,54 @@ function initializeWhatsAppPopup() {
         window.addEventListener('scroll', onScroll, { passive: true });
         onScroll();
     }
+}
+
+function initializeOfferModal() {
+    const modal = document.getElementById('offer-modal');
+    const modalCard = document.getElementById('offer-modal-card');
+    const closeBtn = document.getElementById('btn-close-offer-modal');
+    const declineBtn = document.getElementById('btn-decline-offer');
+
+    if (!modal || !modalCard) return;
+
+    // Show popup once every 24 hours per browser device
+    const COOLDOWN_MS = 24 * 60 * 60 * 1000;
+    const lastShown = localStorage.getItem('cw_offer_modal_last_shown');
+    const now = Date.now();
+
+    if (lastShown && (now - parseInt(lastShown, 10) < COOLDOWN_MS)) {
+        return;
+    }
+
+    const showModal = () => {
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        modal.classList.add('opacity-100');
+        
+        modalCard.classList.remove('scale-95', 'opacity-0');
+        modalCard.classList.add('scale-100', 'opacity-100');
+
+        localStorage.setItem('cw_offer_modal_last_shown', String(now));
+    };
+
+    const hideModal = () => {
+        modal.classList.remove('opacity-100');
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        
+        modalCard.classList.remove('scale-100', 'opacity-100');
+        modalCard.classList.add('scale-95', 'opacity-0');
+    };
+
+    // Auto-popup after 1.5 seconds delay
+    setTimeout(showModal, 1500);
+
+    if (closeBtn) closeBtn.addEventListener('click', hideModal);
+    if (declineBtn) declineBtn.addEventListener('click', hideModal);
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            hideModal();
+        }
+    });
 }
 
 function copyToClipboard(elementId) {
