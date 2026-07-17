@@ -6,7 +6,6 @@
     <title>CEYLON WARFARE // COD4 NETWORK</title>
     <link rel="icon" type="image/x-icon" href="ceylon_warfare.ico"/>
     
-    <!-- Meta Tags -->
     <meta name="description" content="The ultimate legacy experience. Ultra-low latency tactical combat servers.">
     <meta name="keywords" content="COD4, ProMod, Competitive Servers, CEYLON WARFARE">
     <meta name="robots" content="index, follow">
@@ -17,7 +16,6 @@
     <meta property="og:image" content="https://ceylonwarfare.tech/images/og-image.jpg">
     <link rel="canonical" href="https://ceylonwarfare.tech">
     
-    <!-- Stylesheets -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
@@ -94,7 +92,6 @@
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary/30 selection:text-primary">
 
-<!-- Navigation -->
 <nav>
 <div class="flex">
 <button id="mobile-menu-button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden ml-auto inline-flex h-10 w-10 items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
@@ -119,7 +116,6 @@
 </div>
 </nav>
 
-<!-- Hero Section -->
 <section class="relative min-h-screen flex items-center pt-20 overflow-hidden" id="home">
 <div class="absolute inset-0 z-0 bg-background">
 <div class="absolute inset-0 syntax-rain" id="syntax-background"></div>
@@ -128,7 +124,6 @@
 </div>
 <div class="container mx-auto px-8 relative z-10">
 <div class="max-w-4xl">
-<!-- Status Indicator -->
 <div class="flex items-center gap-3 mb-8 bg-surface-container-highest/40 border border-outline-variant/20 self-start px-4 py-2 w-fit backdrop-blur-md" style="animation: fadeIn 0.8s ease-out;">
 <span class="relative flex h-3 w-3">
 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
@@ -155,9 +150,8 @@
 </div>
 </div>
 </section>
-<!-- Server Listings -->
 <script src="script/effects/syntax-rain.js"></script>
-<section class="py-16 sm:py-24 bg-surface" id="servers">
+<section class="py-12 sm:py-20 bg-surface" id="servers">
 <div class="container mx-auto px-4 sm:px-8">
 <div class="flex flex-col md:flex-row justify-start items-start mb-12 sm:mb-16 gap-4 sm:gap-8">
 <div>
@@ -171,22 +165,21 @@
 
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-                <!-- Server Card 1: Search & Destroy -->
                 <div class="group bg-surface-container hover:bg-surface-container-high transition-all duration-300 relative">
                     <div class="absolute left-0 top-0 bottom-0 w-1 bg-primary group-hover:w-2 transition-all"></div>
-                    <div class="p-8 flex flex-col h-full">
-                        <div class="flex justify-between items-start mb-6">
+                    <div class="p-6 sm:p-7 flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-4">
                             <span class="font-headline text-xs font-bold text-primary tracking-[0.3em] uppercase">Ceylon_S&D</span>
                         </div>
-                        <h3 class="font-headline text-2xl font-black text-on-surface uppercase mb-2 min-h-14">SEARCH &amp; DESTROY</h3>
-                        <p class="font-body text-sm text-on-surface-variant mb-6 min-h-24">Bomb elimination mode. Plant the bomb or defend the site. competitive ruleset optimized for public servers.</p>
-                        <div class="bg-surface-container-lowest p-4 mb-6 grid grid-cols-[minmax(0,1fr)_auto] gap-3 items-center border border-outline-variant/10">
-                            <code class="text-primary font-mono text-sm tracking-tighter tabular-nums whitespace-nowrap" id="snd-ip">snd.ceylonwarfare.tech:28960</code>
+                        <h3 class="font-headline text-xl sm:text-2xl font-black text-on-surface uppercase mb-2 min-h-[3rem] sm:min-h-[3.5rem]">SEARCH &amp; DESTROY</h3>
+                        <p class="font-body text-xs sm:text-sm text-on-surface-variant mb-5 min-h-[4rem] sm:min-h-[5rem]">Bomb elimination mode. Plant the bomb or defend the site. competitive ruleset optimized for public servers.</p>
+                        <div class="bg-surface-container-lowest p-3 sm:p-4 mb-5 grid grid-cols-[minmax(0,1fr)_auto] gap-3 items-center border border-outline-variant/10">
+                            <code class="text-primary font-mono text-xs sm:text-sm tracking-tighter tabular-nums whitespace-nowrap" id="snd-ip">snd.ceylonwarfare.tech:28960</code>
                             <button class="text-on-surface-variant hover:text-primary transition-colors active:scale-90" data-copy="snd-ip">
                                 <span class="material-symbols-outlined" data-icon="content_copy">content_copy</span>
                             </button>
                         </div>
-                        <ul class="space-y-3 mb-8 flex-1">
+                        <ul class="space-y-2.5 sm:space-y-3 mb-6 flex-1">
                             <li class="flex items-center gap-2 text-xs font-headline uppercase text-on-surface-variant tracking-wider">
                                 <span class="material-symbols-outlined text-primary text-base" data-icon="check_circle">check_circle</span>
                                 Pro Setup Rulesets
@@ -206,22 +199,21 @@
                     </div>
                 </div>
 
-                <!-- Server Card 2: Team Deathmatch -->
                 <div class="group bg-surface-container hover:bg-surface-container-high transition-all duration-300 relative">
                     <div class="absolute left-0 top-0 bottom-0 w-1 bg-primary group-hover:w-2 transition-all"></div>
-                    <div class="p-8 flex flex-col h-full">
-                        <div class="flex justify-between items-start mb-6">
+                    <div class="p-6 sm:p-7 flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-4">
                             <span class="font-headline text-xs font-bold text-primary tracking-[0.3em] uppercase">Ceylon_TDM</span>
                         </div>
-                        <h3 class="font-headline text-2xl font-black text-on-surface uppercase mb-2 min-h-14">TEAM DEATHMATCH</h3>
-                        <p class="font-body text-sm text-on-surface-variant mb-6 min-h-24">Fast paced elimination mode. Instant respawns, high skill gameplay, no killstreaks. Classic CoD4 TDM action.</p>
-                        <div class="bg-surface-container-lowest p-4 mb-6 grid grid-cols-[minmax(0,1fr)_auto] gap-3 items-center border border-outline-variant/10">
-                            <code class="text-primary font-mono text-sm tracking-tighter tabular-nums whitespace-nowrap" id="tdm-ip">tdm.ceylonwarfare.tech:28960</code>
+                        <h3 class="font-headline text-xl sm:text-2xl font-black text-on-surface uppercase mb-2 min-h-[3rem] sm:min-h-[3.5rem]">TEAM DEATHMATCH</h3>
+                        <p class="font-body text-xs sm:text-sm text-on-surface-variant mb-5 min-h-[4rem] sm:min-h-[5rem]">Fast paced elimination mode. Instant respawns, high skill gameplay, no killstreaks. Classic CoD4 TDM action.</p>
+                        <div class="bg-surface-container-lowest p-3 sm:p-4 mb-5 grid grid-cols-[minmax(0,1fr)_auto] gap-3 items-center border border-outline-variant/10">
+                            <code class="text-primary font-mono text-xs sm:text-sm tracking-tighter tabular-nums whitespace-nowrap" id="tdm-ip">tdm.ceylonwarfare.tech:28960</code>
                             <button class="text-on-surface-variant hover:text-primary transition-colors active:scale-90" data-copy="tdm-ip">
                                 <span class="material-symbols-outlined" data-icon="content_copy">content_copy</span>
                             </button>
                         </div>
-                        <ul class="space-y-3 mb-8 flex-1">
+                        <ul class="space-y-2.5 sm:space-y-3 mb-6 flex-1">
                             <li class="flex items-center gap-2 text-xs font-headline uppercase text-on-surface-variant tracking-wider">
                                 <span class="material-symbols-outlined text-primary text-base" data-icon="check_circle">check_circle</span>
                                 Pro TDM Configuration
@@ -241,22 +233,21 @@
                     </div>
                 </div>
 
-                <!-- Server Card 3: Sniper Only -->
                 <div class="group bg-surface-container hover:bg-surface-container-high transition-all duration-300 relative">
                     <div class="absolute left-0 top-0 bottom-0 w-1 bg-primary group-hover:w-2 transition-all"></div>
-                    <div class="p-8 flex flex-col h-full">
-                        <div class="flex justify-between items-start mb-6">
+                    <div class="p-6 sm:p-7 flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-4">
                             <span class="font-headline text-xs font-bold text-primary tracking-[0.3em] uppercase">Ceylon_Snipe</span>
                         </div>
-                        <h3 class="font-headline text-2xl font-black text-on-surface uppercase mb-2 min-h-14">SNIPER ONLY</h3>
-                        <p class="font-body text-sm text-on-surface-variant mb-6 min-h-24">Sniper-only elimination with custom sniper rifles and maps. Test your precision and quickscope skills on purpose built sniper arenas.</p>
-                        <div class="bg-surface-container-lowest p-4 mb-6 grid grid-cols-[minmax(0,1fr)_auto] gap-3 items-center border border-outline-variant/10">
-                            <code class="text-primary font-mono text-sm tracking-tighter tabular-nums whitespace-nowrap" id="sniper-ip">snipe.ceylonwarfare.tech:28968</code>
+                        <h3 class="font-headline text-xl sm:text-2xl font-black text-on-surface uppercase mb-2 min-h-[3rem] sm:min-h-[3.5rem]">SNIPER ONLY</h3>
+                        <p class="font-body text-xs sm:text-sm text-on-surface-variant mb-5 min-h-[4rem] sm:min-h-[5rem]">Sniper-only elimination with custom sniper rifles and maps. Test your precision and quickscope skills on purpose built sniper arenas.</p>
+                        <div class="bg-surface-container-lowest p-3 sm:p-4 mb-5 grid grid-cols-[minmax(0,1fr)_auto] gap-3 items-center border border-outline-variant/10">
+                            <code class="text-primary font-mono text-xs sm:text-sm tracking-tighter tabular-nums whitespace-nowrap" id="sniper-ip">snipe.ceylonwarfare.tech:28968</code>
                             <button class="text-on-surface-variant hover:text-primary transition-colors active:scale-90" data-copy="sniper-ip">
                                 <span class="material-symbols-outlined" data-icon="content_copy">content_copy</span>
                             </button>
                         </div>
-                        <ul class="space-y-3 mb-8 flex-1">
+                        <ul class="space-y-2.5 sm:space-y-3 mb-6 flex-1">
                             <li class="flex items-center gap-2 text-xs font-headline uppercase text-on-surface-variant tracking-wider">
                                 <span class="material-symbols-outlined text-primary text-base" data-icon="check_circle">check_circle</span>
                                 Sniper Loadout Only
@@ -276,22 +267,21 @@
                     </div>
                 </div>
 
-                <!-- Server Card 4: War Server -->
                 <div class="group bg-surface-container hover:bg-surface-container-high transition-all duration-300 relative">
                     <div class="absolute left-0 top-0 bottom-0 w-1 bg-primary group-hover:w-2 transition-all"></div>
-                    <div class="p-8 flex flex-col h-full">
-                        <div class="flex justify-between items-start mb-6">
+                    <div class="p-6 sm:p-7 flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-4">
                             <span class="font-headline text-xs font-bold text-primary tracking-[0.3em] uppercase">Ceylon_War</span>
                         </div>
-                        <h3 class="font-headline text-2xl font-black text-on-surface uppercase mb-2 min-h-14">WAR SERVER</h3>
-                        <p class="font-body text-sm text-on-surface-variant mb-6 min-h-24">Vanilla CoD4 Mode gameplay. Large scale map pool, unmodified Call of Duty 4 mechanics.</p>
-                        <div class="bg-surface-container-lowest p-4 mb-6 grid grid-cols-[minmax(0,1fr)_auto] gap-3 items-center border border-outline-variant/10">
-                            <code class="text-primary font-mono text-sm tracking-tighter tabular-nums whitespace-nowrap" id="war-ip">war.ceylonwarfare.tech:28968</code>
+                        <h3 class="font-headline text-xl sm:text-2xl font-black text-on-surface uppercase mb-2 min-h-[3rem] sm:min-h-[3.5rem]">WAR SERVER</h3>
+                        <p class="font-body text-xs sm:text-sm text-on-surface-variant mb-5 min-h-[4rem] sm:min-h-[5rem]">Vanilla CoD4 Mode gameplay. Large scale map pool, unmodified Call of Duty 4 mechanics.</p>
+                        <div class="bg-surface-container-lowest p-3 sm:p-4 mb-5 grid grid-cols-[minmax(0,1fr)_auto] gap-3 items-center border border-outline-variant/10">
+                            <code class="text-primary font-mono text-xs sm:text-sm tracking-tighter tabular-nums whitespace-nowrap" id="war-ip">war.ceylonwarfare.tech:28968</code>
                             <button class="text-on-surface-variant hover:text-primary transition-colors active:scale-90" data-copy="war-ip">
                                 <span class="material-symbols-outlined" data-icon="content_copy">content_copy</span>
                             </button>
                         </div>
-                        <ul class="space-y-3 mb-8 flex-1">
+                        <ul class="space-y-2.5 sm:space-y-3 mb-6 flex-1">
                             <li class="flex items-center gap-2 text-xs font-headline uppercase text-on-surface-variant tracking-wider">
                                 <span class="material-symbols-outlined text-primary text-base" data-icon="check_circle">check_circle</span>
                                 Vanila Mode Configuration
@@ -314,7 +304,6 @@
         </div>
     </section>
 
-<!-- Rentals & Mod Making -->
 <section class="py-16 sm:py-24 bg-surface-container-low" id="rentals">
 <div class="container mx-auto px-4 sm:px-8">
 <div class="mb-12 sm:mb-16">
@@ -353,7 +342,7 @@ Rcon Admin Access
 <div class="bg-surface-container border border-outline-variant/30 p-6 sm:p-8 h-full flex flex-col">
 <p class="font-headline text-xs tracking-[0.2em] text-primary uppercase mb-3">PUBLIC SERVER</p>
 <h3 class="font-headline text-2xl font-black uppercase mb-2">PUBLIC SERVER<br/></h3>
-<p class="text-on-surface-variant text-sm mb-4">24 slots public server with flags mod setup and killcam music support.</p>
+<p class="text-on-surface-variant text-sm mb-4">24 slots public server with flags mod setup.</p>
 <p class="font-headline text-[11px] tracking-[0.16em] text-primary uppercase mb-3">SERVER SPECS</p>
 <ul class="space-y-2 mb-6">
 <li class="flex items-center gap-2 text-xs font-headline uppercase text-on-surface-variant tracking-wider">
@@ -366,15 +355,11 @@ FlagsMod / PML220
 </li>
 <li class="flex items-center gap-2 text-xs font-headline uppercase text-on-surface-variant tracking-wider">
 <span class="material-symbols-outlined text-primary text-base" data-icon="check_circle">check_circle</span>
-Killcam Music Integration
-</li>
-<li class="flex items-center gap-2 text-xs font-headline uppercase text-on-surface-variant tracking-wider">
-<span class="material-symbols-outlined text-primary text-base" data-icon="check_circle">check_circle</span>
 B3 Administration
 </li>
 </ul>
 <div class="font-headline text-3xl font-black text-secondary mt-auto mb-6">Rs 1800<span class="text-sm text-on-surface-variant font-body"> / monthly</span></div>
-<a href="https://wa.me/94788901407?text=Hi%2C%20I%20want%20to%20order%20the%20Public%20Server%20FlagsMod%20%2B%20Killcam%20Music%20plan%20%28Rs%201800%29." target="_blank" rel="noopener" class="w-full block text-center bg-surface-container-highest hover:bg-primary hover:text-on-primary transition-all py-3 font-headline font-bold uppercase tracking-widest text-sm">ORDER NOW</a>
+<a href="https://wa.me/94788901407?text=Hi%2C%20I%20want%20to%20order%20the%20Public%20Server%20FlagsMod%20plan%20%28Rs%201800%29." target="_blank" rel="noopener" class="w-full block text-center bg-surface-container-highest hover:bg-primary hover:text-on-primary transition-all py-3 font-headline font-bold uppercase tracking-widest text-sm">ORDER NOW</a>
 </div>
 
 <div class="bg-surface-container border border-outline-variant/30 p-6 sm:p-8 h-full flex flex-col">
@@ -393,7 +378,7 @@ Weapon Skins &amp; Custom Models
 </li>
 <li class="flex items-center gap-2 text-xs font-headline uppercase text-on-surface-variant tracking-wider">
 <span class="material-symbols-outlined text-primary text-base" data-icon="check_circle">check_circle</span>
-Flags/Killcam/Sound Support
+Flags/Sound Support
 </li>
 <li class="flex items-center gap-2 text-xs font-headline uppercase text-on-surface-variant tracking-wider">
 <span class="material-symbols-outlined text-primary text-base" data-icon="check_circle">check_circle</span>
@@ -407,26 +392,20 @@ Delivery + Revision Support
 </div>
 </section>
 
-<!-- Ceylon Warfare Mod Offer Popup Modal -->
 <div id="offer-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-500">
     <div class="relative w-full max-w-lg mx-4 bg-surface-container border border-primary/30 p-6 md:p-8 rounded-sm shadow-[0_0_50px_rgba(77,159,255,0.2)] transform scale-95 opacity-0 transition-all duration-500" id="offer-modal-card">
-        <!-- Close Button (Top Right) -->
         <button id="btn-close-offer-modal" class="absolute top-4 right-4 text-on-surface-variant hover:text-primary transition-colors focus:outline-none" aria-label="Close offer">
             <span class="material-symbols-outlined text-2xl" data-icon="close">close</span>
         </button>
 
-        <!-- Accent Top Bar -->
         <div class="absolute left-0 top-0 right-0 h-1 bg-gradient-to-r from-primary via-tertiary to-primary"></div>
 
-        <!-- Content -->
         <div class="flex flex-col items-center text-center mt-2">
-            <!-- Release tag -->
             <span class="bg-primary/10 text-primary text-xs font-headline font-bold uppercase tracking-[0.2em] px-3 py-1 mb-4 border border-primary/20">SOURCE CODE RELEASE</span>
             
             <h3 class="font-headline text-3xl font-black uppercase text-on-surface tracking-tight mb-2">CEYLON WARFARE MOD</h3>
             <p class="font-headline text-sm text-primary tracking-[0.1em] uppercase mb-4">WITH FULL SOURCE CODE</p>
             
-            <!-- Price Badge -->
             <div class="flex items-center justify-center gap-4 bg-surface-container-lowest border border-outline-variant/30 px-6 py-4 mb-6 rounded-sm w-full">
                 <div class="text-center">
                     <span class="text-xs text-on-surface-variant uppercase tracking-[0.15em] block font-headline">FULL LIFETIME ACCESS</span>
@@ -455,7 +434,6 @@ Delivery + Revision Support
                 </li>
             </ul>
 
-            <!-- Order Button -->
             <div class="flex flex-col gap-3 w-full">
                 <a href="https://wa.me/94788901407?text=Hi%2C%20I%20want%20to%20buy%20the%20Ceylon%20Warfare%20Mod%20with%20Source%20Code%20for%20%2410." target="_blank" rel="noopener" class="flex items-center justify-center gap-3 w-full bg-secondary text-on-secondary px-6 py-3.5 font-headline font-bold uppercase tracking-widest text-sm rounded-sm hover:shadow-[0_0_20px_rgba(77,159,255,0.3)] transition-all active:scale-95">
                     <span class="material-symbols-outlined text-lg" data-icon="chat">chat</span>
@@ -463,7 +441,6 @@ Delivery + Revision Support
                 </a>
             </div>
 
-            <!-- No thanks / Close text link -->
             <button id="btn-decline-offer" class="mt-5 text-xs text-on-surface-variant hover:text-primary underline uppercase tracking-widest font-headline transition-colors">
                 No thanks, continue to site
             </button>
@@ -471,7 +448,6 @@ Delivery + Revision Support
     </div>
 </div>
 
-<!-- WhatsApp Popup (Rentals section only) -->
 <div id="whatsapp-popup" class="fixed bottom-5 right-5 z-[80] flex flex-col items-center gap-2 opacity-0 translate-y-4 pointer-events-none transition-all duration-300">
 <a id="whatsapp-chat-link" href="#" target="_blank" rel="noopener" aria-label="Contact me through WhatsApp" class="flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_10px_25px_rgba(37,211,102,0.45)] transition-transform hover:scale-105">
 <span class="material-symbols-outlined text-3xl" data-icon="chat">chat</span>
@@ -479,7 +455,6 @@ Delivery + Revision Support
 <span class="font-headline text-[10px] uppercase tracking-[0.12em] text-[#25D366] bg-surface/80 px-2 py-1 border border-[#25D366]/40">CONTACT ME</span>
 </div>
 
-<!-- Footer -->
 <footer class="bg-[#0e0e0f] dark:bg-[#0e0e0f] w-full py-12 px-8 border-t border-[#484849]/20">
 <div class="text-center">
 <p class="text-[#adaaab] font-['Space_Grotesk'] text-[10px] tracking-[0.3em] uppercase">
@@ -488,6 +463,5 @@ Delivery + Revision Support
 </div>
 </footer>
 
-<!-- Scripts -->
 <script src="script/script.js"></script>
 </body></html>

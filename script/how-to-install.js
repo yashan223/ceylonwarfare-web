@@ -48,11 +48,9 @@
                 const targetTab = this.getAttribute('data-tab');
                 if (!targetTab) return;
 
-                // Remove active class from all buttons and contents
                 tabBtns.forEach(b => b.classList.remove('active'));
                 tabContents.forEach(c => c.classList.remove('active'));
 
-                // Add active class to this button and active tab content panel
                 this.classList.add('active');
                 const activePanel = document.getElementById(targetTab);
                 if (activePanel) {
@@ -73,7 +71,6 @@
                 navigator.clipboard.writeText(textToCopy).then(() => {
                     showNotification(`COPIED TO CLIPBOARD`);
                     
-                    // Add temporal feedback animation on button
                     const iconElement = this.querySelector('.material-symbols-outlined');
                     const originalIcon = iconElement ? iconElement.textContent : null;
                     
@@ -92,21 +89,19 @@
     }
 
     function showNotification(message) {
-        // Remove any existing notifications to avoid stacking overlay
         const existing = document.querySelectorAll('.toast-notification');
         existing.forEach(el => el.remove());
 
         const notification = document.createElement('div');
         notification.className = 'toast-notification';
         
-        // Inline styles for absolute premium look & self-containment
         Object.assign(notification.style, {
             position: 'fixed',
             top: '20px',
             left: '50%',
             transform: 'translateX(-50%)',
-            backgroundColor: '#4d9fff', // cw-primary color
-            color: '#04101d', // cw-on-primary
+            backgroundColor: '#4d9fff',
+            color: '#04101d',
             padding: '12px 24px',
             borderRadius: '2px',
             boxShadow: '0 10px 30px rgba(77, 159, 255, 0.35)',
@@ -123,10 +118,8 @@
         notification.textContent = message;
         document.body.appendChild(notification);
 
-        // Force browser layout reflow to trigger transition
         notification.offsetHeight;
 
-        // Slide down animation
         notification.style.opacity = '1';
         notification.style.transform = 'translateX(-50%) translateY(10px)';
 
